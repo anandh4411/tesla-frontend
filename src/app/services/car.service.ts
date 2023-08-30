@@ -18,4 +18,8 @@ export class CarService {
   public getCarDetails(id:any): Observable<any> {
     return this.http.get(this.apiUrl + 'car/details/' + id);
   }
+
+  public searchCar(query:any): Observable<any> {
+    return this.http.get(this.apiUrl + 'search/' + query);
+  }
 }

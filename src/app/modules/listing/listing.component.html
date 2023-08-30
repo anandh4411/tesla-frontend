@@ -39,7 +39,7 @@
                 <aside class="sidebar style_2">
                     <div class="widget">
                         <h3 class="widget_title">Search</h3>
-                        <div class="form-group mb-0"><input type="search" name="search" class="form-control"
+                        <div class="form-group mb-0"><input (keyup)="search()" [(ngModel)]="query" type="search" name="search" class="form-control"
                                 placeholder="Search…"></div>
                     </div>
                     <div class="widget">

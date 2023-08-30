@@ -9,15 +9,32 @@ import { environment } from '../../../environments/environment.development';
 })
 export class ListingComponent implements OnInit {
   apiUrl = environment.apiUrl;
+  query:any = '';
 
   public cars:any = [];
 
   constructor(private carService: CarService){}
 
   ngOnInit(){
+    this.getCars();
+  }
+
+  getCars(){
     this.carService.getCars().subscribe((res)=>{
       console.log(res);
       this.cars = res;
+    });
+  }
+
+  search(){
+    this.carService.searchCar(this.query).subscribe((res)=>{
+      if (res){
+        console.log(res);
+        this.cars = res;
+      }
+      else{
+        this.getCars();
+      }
     });
   }
 
