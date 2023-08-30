@@ -19,7 +19,7 @@ const routes: Routes = [
       import('./modules/home/home.module').then((m) => m.HomeModule),
   },
   {
-    path: 'car/details',
+    path: 'car/details/:id',
     component: CarDetailsComponent,
     loadChildren: () =>
       import('./modules/car-details/car-details.module').then((m) => m.CarDetailsModule),
