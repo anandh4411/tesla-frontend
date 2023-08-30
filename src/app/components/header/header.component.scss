@@ -1,0 +1,15 @@
+.site_logo{
+    width: 40px;
+}
+.site_link{
+    cursor: pointer;
+    display: flex;
+    h4{
+        margin-left: 15px;
+        margin-top: 10px;
+    }
+}
+
+.active{
+    color: #D16527;
+}
