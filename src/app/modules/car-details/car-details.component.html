@@ -5,7 +5,7 @@
                 <div class="col-lg-6">
                     <div class="image_gallery_carousel">
                         <div class="details_image_carousel">
-                            <div class="gallery_image"><img src="assets/images/products/product_img_1.png"
+                            <div class="gallery_image"><img src="{{apiUrl}}{{car?.image}}"
                                     alt="ProMotors - Product Image"></div>
                         </div>
                     </div>
@@ -17,8 +17,8 @@
                             <li><a href="/car/listing">Cars</a></li>
                             <li><a>Car Details</a></li>
                         </ul>
-                        <h1 class="details_item_title">Silentblock damper M12 Ø 75mm</h1>
-                        <div class="item_price"><span class="sale_price">$69</span> <del class="remove_price">$76</del>
+                        <h1 class="details_item_title">{{car?.title}}</h1>
+                        <div class="item_price"><span class="sale_price">${{car?.price}}</span>
                         </div>
                         <ul class="rating_star unordered_list mb-4">
                             <li><i class="fa-solid fa-star"></i></li>
@@ -27,18 +27,12 @@
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                         </ul>
-                        <p>Nisl purus in mollis nunc sed id. Nunc sed velit dignissim sodales ut eu sem. c scelerisque
-                            fermentum dui faucibus in ornare. Nisl condimentum id venenatis a condimentum. Id
-                            consectetur purus
-                            ut faucibus pulvinar</p>
+                        <p>{{car?.description}}</p>
                         <ul class="cart_btns_group unordered_list mb-4">
                             <li><a class="btn btn-primary"><span class="btn_text">Buy Now</span></a></li>
                         </ul>
                         <ul class="product_details_info_list unordered_list_block text-uppercase">
-                            <li><span>Categories: </span><a href="#!">Automatic</a> <a href="#!">Mechanic</a></li>
-                            <li><span>Sku: </span>01289</li>
-                            <li><span>Tags: </span><a href="#!">Energy</a> <a href="#!">Speed</a> <a
-                                    href="#!">System</a></li>
+                            <li><span>Category: </span><a>{{car?.category}}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -54,21 +48,7 @@
             <div class="tab-content p-0 bg-transparent">
                 <div class="tab-pane fade show active" id="tab_description" role="tabpanel">
                     <h3 class="details_info_title">Product Description</h3>
-                    <p class="p-0">One Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, iste,
-                        architecto
-                        ullam tenetur quia nemo ratione tempora consectetur quos minus voluptates nisi hic alias libero
-                        explicabo reiciendis sint ut quo nulla ipsa aliquid neque molestias et qui sunt. Odit,
-                        molestiae. One
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, iste, architecto ullam
-                        tenetur quia
-                        nemo ratione tempora consectetur quos minus voluptates nisi hic alias libero explicabo
-                        reiciendis sint
-                        ut quo nulla ipsa aliquid neque molestias et qui sunt. Odit, molestiae.</p>
-                    <p class="mb-0 p-0">One Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, iste,
-                        architecto ullam tenetur quia nemo ratione tempora consectetur quos minus voluptates nisi hic
-                        alias
-                        libero explicabo reiciendis sint ut quo nulla ipsa aliquid neque molestias et qui sunt. Odit,
-                        molestiae.</p>
+                    <p class="p-0">{{car?.product_description}}</p>
                 </div>
             </div>
         </div>

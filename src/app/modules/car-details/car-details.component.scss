@@ -1,3 +1,6 @@
 .image_gallery_carousel {
     padding-left: unset !important;
 }
+.image_gallery_carousel .details_image_carousel .gallery_image img {
+    max-width: 100%;
+}
