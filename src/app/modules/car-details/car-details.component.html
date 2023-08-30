@@ -1,0 +1,56 @@
+<section class="details_section shop_details section_space_lg">
+    <div class="container">
+        <div class="section_space_sm pt-0">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="image_gallery_carousel">
+                        <div class="details_image_carousel">
+                            <div class="gallery_image"><img src="{{apiUrl}}{{car?.image}}"
+                                    alt="ProMotors - Product Image"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="details_content ps-lg-4">
+                        <ul class="breadcrumb_nav unordered_list mb-4">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/car/listing">Cars</a></li>
+                            <li><a>Car Details</a></li>
+                        </ul>
+                        <h1 class="details_item_title">{{car?.title}}</h1>
+                        <div class="item_price"><span class="sale_price">${{car?.price}}</span>
+                        </div>
+                        <ul class="rating_star unordered_list mb-4">
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                        </ul>
+                        <p>{{car?.description}}</p>
+                        <ul class="cart_btns_group unordered_list mb-4">
+                            <li><a class="btn btn-primary"><span class="btn_text">Buy Now</span></a></li>
+                        </ul>
+                        <ul class="product_details_info_list unordered_list_block text-uppercase">
+                            <li><span>Category: </span><a>{{car?.category}}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product_additional_info">
+            <ul class="nav tab_nav style_3" role="tablist">
+                <li class="nav-item" role="presentation"><button class="active" data-bs-toggle="tab"
+                        data-bs-target="#tab_description" type="button" role="tab"
+                        aria-selected="true">Description</button>
+                </li>
+            </ul>
+            <div class="tab-content p-0 bg-transparent">
+                <div class="tab-pane fade show active" id="tab_description" role="tabpanel">
+                    <h3 class="details_info_title">Product Description</h3>
+                    <p class="p-0">{{car?.product_description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
